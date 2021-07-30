@@ -6,7 +6,6 @@ import Entities.Worker;
 import Entities.HourContract;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
-import java.util.Calendar;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import Entities.Departament;
@@ -16,7 +15,6 @@ public class Program {
     public static void main(String[] args) {
         Locale.setDefault(Locale.US);
         SimpleDateFormat sdf = new SimpleDateFormat("dd/MM/yyyy");
-        Calendar calendar = Calendar.getInstance();
         Scanner sc = new Scanner(System.in);
         Worker worker = new Worker();
         

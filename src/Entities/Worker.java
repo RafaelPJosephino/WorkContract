@@ -1,5 +1,6 @@
 package Entities;
 
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
@@ -53,9 +54,11 @@ public class Worker {
     }
 
     public double income(Date date) {
+        SimpleDateFormat sdf = new SimpleDateFormat("MM/yyyy");
         double totalContracts = baseSalary;
         for (HourContract contract : contracts) {
-            if (date.equals(contract.getData())) {
+            
+            if (sdf.format(date).equals(sdf.format(contract.getData()))) {
                 totalContracts += contract.totalValue();
             }
         }
